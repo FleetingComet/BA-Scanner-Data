@@ -1,0 +1,58 @@
+name: Update SchaleDB Data
+
+on:
+  schedule:
+    # for every 2 weeks on the 1st and the 15th of every month
+    - cron: '30 1 1,15 * *' # https://stackoverflow.com/a/46233330
+  workflow_dispatch:  # manual triggering
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+        contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run data processing - Items
+        run: |
+          python unified.py \
+            --type item \
+            --url https://schaledb.com/data/en/items.min.json \
+            --output data/items.json
+
+      - name: Run data processing - Students
+        run: |
+          python unified.py \
+            --type student \
+            --url https://schaledb.com/data/en/students.min.json \
+            --output data/students.json
+
+      - name: Run data processing - Equipment
+        run: |
+          python unified.py \
+            --type equipment \
+            --url https://schaledb.com/data/en/equipment.min.json \
+            --output data/equipment.json
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/*.json
+          git commit -m "Update data from SchaleDB on $(date -u +'%Y-%m-%d')"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
