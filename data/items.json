@@ -1416,6 +1416,10 @@
         "name": "Juri (Part-time Job)'s Eleph"
     },
     {
+        "id": 10115,
+        "name": "Rei's Eleph"
+    },
+    {
         "id": 13000,
         "name": "Akane's Eleph"
     },
@@ -1714,6 +1718,10 @@
     {
         "id": 20043,
         "name": "Izumi (New Year)'s Eleph"
+    },
+    {
+        "id": 20044,
+        "name": "Sumire (Part-time Job)'s Eleph"
     },
     {
         "id": 23000,
@@ -2526,6 +2534,22 @@
     {
         "id": 80573,
         "name": "使い切りタイプの洗剤"
+    },
+    {
+        "id": 80590,
+        "name": "イベントPt"
+    },
+    {
+        "id": 80591,
+        "name": "応援バルーン"
+    },
+    {
+        "id": 80592,
+        "name": "プロテインドリンク"
+    },
+    {
+        "id": 80593,
+        "name": "抽選券"
     },
     {
         "id": 100000,
