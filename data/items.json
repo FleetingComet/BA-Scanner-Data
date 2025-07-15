@@ -1437,7 +1437,7 @@
     },
     {
         "id": 10112,
-        "name": "Asuna (Uniform)'s Eleph"
+        "name": "Asuna (School)'s Eleph"
     },
     {
         "id": 10113,
@@ -1893,7 +1893,7 @@
     },
     {
         "id": 26014,
-        "name": "Karin (Uniform)'s Eleph"
+        "name": "Karin (School)'s Eleph"
     },
     {
         "id": 80000,
@@ -2577,15 +2577,15 @@
     },
     {
         "id": 80540,
-        "name": "イベントPt"
+        "name": "Event Points"
     },
     {
         "id": 80541,
-        "name": "EXPO記念品"
+        "name": "Expo Souvenir"
     },
     {
         "id": 80542,
-        "name": "誰かの忘れ物"
+        "name": "Someone's Lost Item"
     },
     {
         "id": 80560,
@@ -2909,7 +2909,7 @@
     },
     {
         "id": 151019,
-        "name": "ミレニアムタワーラウンジシリーズ選択ボックス"
+        "name": "Millennium Tower Lounge Furniture Choice Box"
     },
     {
         "id": 151020,
@@ -3561,7 +3561,7 @@
     },
     {
         "id": 191019,
-        "name": "ミレニアムタワーラウンジシリーズ抽選ボックス"
+        "name": "Millennium Tower Lounge Furniture Raffle Box"
     },
     {
         "id": 191020,
