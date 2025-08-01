@@ -1433,7 +1433,7 @@
     },
     {
         "id": 10111,
-        "name": "Neru (Uniform)'s Eleph"
+        "name": "Neru (School)'s Eleph"
     },
     {
         "id": 10112,
@@ -1474,6 +1474,18 @@
     {
         "id": 10121,
         "name": "Yukari (Swimsuit)'s Eleph"
+    },
+    {
+        "id": 10122,
+        "name": "Mika (Swimsuit)'s Eleph"
+    },
+    {
+        "id": 10123,
+        "name": "Seia (Swimsuit)'s Eleph"
+    },
+    {
+        "id": 10124,
+        "name": "Hasumi (Swimsuit)'s Eleph"
     },
     {
         "id": 13000,
@@ -1800,6 +1812,10 @@
         "name": "Kikyou (Swimsuit)'s Eleph"
     },
     {
+        "id": 20048,
+        "name": "Nagisa (Swimsuit)'s Eleph"
+    },
+    {
         "id": 23000,
         "name": "Airi's Eleph"
     },
@@ -1894,6 +1910,10 @@
     {
         "id": 26014,
         "name": "Karin (School)'s Eleph"
+    },
+    {
+        "id": 26015,
+        "name": "Ichika (Swimsuit)'s Eleph"
     },
     {
         "id": 80000,
@@ -2589,11 +2609,11 @@
     },
     {
         "id": 80560,
-        "name": "バレンタインスタンプ"
+        "name": "Valentine Stamp"
     },
     {
         "id": 80561,
-        "name": "バレンタインデーのお誘い"
+        "name": "Valentine's Day Outing Pass"
     },
     {
         "id": 80570,
@@ -2658,6 +2678,26 @@
     {
         "id": 80633,
         "name": "木彫り人形（レンゲ）"
+    },
+    {
+        "id": 80650,
+        "name": "正義実現委員会の腕章"
+    },
+    {
+        "id": 80651,
+        "name": "特上角砂糖"
+    },
+    {
+        "id": 80652,
+        "name": "トリニティスペシャルケーキ"
+    },
+    {
+        "id": 80653,
+        "name": "山海経茶園の銘茶"
+    },
+    {
+        "id": 80654,
+        "name": "プライベートビーチのパンフレット"
     },
     {
         "id": 100000,
@@ -2914,6 +2954,10 @@
     {
         "id": 151020,
         "name": "ハイランダー列車シリーズ選択ボックス"
+    },
+    {
+        "id": 151021,
+        "name": "ティーパーティーシリーズ選択ボックス"
     },
     {
         "id": 151991,
@@ -3566,6 +3610,10 @@
     {
         "id": 191020,
         "name": "ハイランダー列車シリーズ抽選ボックス"
+    },
+    {
+        "id": 191021,
+        "name": "ティーパーティーシリーズ抽選ボックス"
     },
     {
         "id": 191991,

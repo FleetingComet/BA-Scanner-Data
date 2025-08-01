@@ -833,7 +833,7 @@
     },
     {
         "id": 10111,
-        "name": "Neru (Uniform)"
+        "name": "Neru (School)"
     },
     {
         "id": 20041,
@@ -906,5 +906,25 @@
     {
         "id": 20047,
         "name": "Kikyou (Swimsuit)"
+    },
+    {
+        "id": 10123,
+        "name": "Seia (Swimsuit)"
+    },
+    {
+        "id": 10124,
+        "name": "Hasumi (Swimsuit)"
+    },
+    {
+        "id": 26015,
+        "name": "Ichika (Swimsuit)"
+    },
+    {
+        "id": 20048,
+        "name": "Nagisa (Swimsuit)"
+    },
+    {
+        "id": 10122,
+        "name": "Mika (Swimsuit)"
     }
 ]
