@@ -1445,7 +1445,7 @@
     },
     {
         "id": 10114,
-        "name": "Juri (Part-time Job)'s Eleph"
+        "name": "Juri (Part-Timer)'s Eleph"
     },
     {
         "id": 10115,
@@ -1797,7 +1797,7 @@
     },
     {
         "id": 20044,
-        "name": "Sumire (Part-time Job)'s Eleph"
+        "name": "Sumire (Part-Timer)'s Eleph"
     },
     {
         "id": 20045,
@@ -2617,19 +2617,19 @@
     },
     {
         "id": 80570,
-        "name": "パフェ交換券"
+        "name": "Parfait Exchange Ticket"
     },
     {
         "id": 80571,
-        "name": "試食用パンケーキ"
+        "name": "Pancake Sample"
     },
     {
         "id": 80572,
-        "name": "救急医学部の特製薬"
+        "name": "Medical Emergency Club Remedy"
     },
     {
         "id": 80573,
-        "name": "使い切りタイプの洗剤"
+        "name": "Single-Use Detergent"
     },
     {
         "id": 80590,
@@ -2869,7 +2869,7 @@
     },
     {
         "id": 150045,
-        "name": "T9装備設計図選択ボックス"
+        "name": "T9 Equipment Blueprint Choice Box"
     },
     {
         "id": 151000,
@@ -3702,5 +3702,9 @@
     {
         "id": 20001001,
         "name": "Mug of Coffee"
+    },
+    {
+        "id": 20002000,
+        "name": "手作りロールケーキ"
     }
 ]

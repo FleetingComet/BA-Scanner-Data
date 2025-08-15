@@ -712,6 +712,14 @@
         "name": "Shark Teeth Amulet"
     },
     {
+        "id": 7009,
+        "category": "Charm",
+        "rarity": "N",
+        "tier": 10,
+        "icon": "equipment_icon_charm_tier10",
+        "name": "キーキャップトイ"
+    },
+    {
         "id": 8000,
         "category": "Watch",
         "rarity": "N",
@@ -784,6 +792,14 @@
         "name": "Diver Watch"
     },
     {
+        "id": 8009,
+        "category": "Watch",
+        "rarity": "N",
+        "tier": 10,
+        "icon": "equipment_icon_watch_tier10",
+        "name": "スクリーンウォッチ"
+    },
+    {
         "id": 9000,
         "category": "Necklace",
         "rarity": "N",
@@ -854,6 +870,14 @@
         "tier": 9,
         "icon": "equipment_icon_necklace_tier9",
         "name": "Octopus Holder"
+    },
+    {
+        "id": 9009,
+        "category": "Necklace",
+        "rarity": "N",
+        "tier": 10,
+        "icon": "equipment_icon_necklace_tier10",
+        "name": "メモリネックレス"
     },
     {
         "id": 101001,
@@ -1352,6 +1376,14 @@
         "name": "Shark Teeth Amulet Blueprint"
     },
     {
+        "id": 107009,
+        "category": "Charm",
+        "rarity": "N",
+        "tier": 10,
+        "icon": "equipment_icon_charm_tier10_piece",
+        "name": "キーキャップトイの設計図"
+    },
+    {
         "id": 108001,
         "category": "Watch",
         "rarity": "N",
@@ -1416,6 +1448,14 @@
         "name": "Diver Watch Blueprint"
     },
     {
+        "id": 108009,
+        "category": "Watch",
+        "rarity": "N",
+        "tier": 10,
+        "icon": "equipment_icon_watch_tier10_piece",
+        "name": "スクリーンウォッチの設計図"
+    },
+    {
         "id": 109001,
         "category": "Necklace",
         "rarity": "N",
@@ -1478,5 +1518,13 @@
         "tier": 9,
         "icon": "equipment_icon_necklace_tier9_piece",
         "name": "Octopus Holder Blueprint"
+    },
+    {
+        "id": 109009,
+        "category": "Necklace",
+        "rarity": "N",
+        "tier": 10,
+        "icon": "equipment_icon_necklace_tier10_piece",
+        "name": "メモリネックレスの設計図"
     }
 ]
