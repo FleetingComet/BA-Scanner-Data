@@ -604,6 +604,22 @@
         "name": "Superior Tactical Training Blu-ray (Highlander)"
     },
     {
+        "id": 3100,
+        "name": "Beginner Tactical Training Blu-ray (Wildhunt)"
+    },
+    {
+        "id": 3101,
+        "name": "Normal Tactical Training Blu-ray (Wildhunt)"
+    },
+    {
+        "id": 3102,
+        "name": "Advanced Tactical Training Blu-ray (Wildhunt)"
+    },
+    {
+        "id": 3103,
+        "name": "Superior Tactical Training Blu-ray (Wildhunt)"
+    },
+    {
         "id": 4000,
         "name": "Beginner Tech Notes (Hyakkiyako)"
     },
@@ -762,6 +778,22 @@
     {
         "id": 4093,
         "name": "Superior Tech Notes (Highlander)"
+    },
+    {
+        "id": 4100,
+        "name": "Beginner Tech Notes (Wildhunt)"
+    },
+    {
+        "id": 4101,
+        "name": "Normal Tech Notes (Wildhunt)"
+    },
+    {
+        "id": 4102,
+        "name": "Advanced Tech Notes (Wildhunt)"
+    },
+    {
+        "id": 4103,
+        "name": "Superior Tech Notes (Wildhunt)"
     },
     {
         "id": 5000,
@@ -1486,6 +1518,14 @@
     {
         "id": 10124,
         "name": "Hasumi (Swimsuit)'s Eleph"
+    },
+    {
+        "id": 10125,
+        "name": "Eri's Eleph"
+    },
+    {
+        "id": 10126,
+        "name": "Kanoe's Eleph"
     },
     {
         "id": 13000,
@@ -2633,19 +2673,19 @@
     },
     {
         "id": 80590,
-        "name": "イベントPt"
+        "name": "Event Points"
     },
     {
         "id": 80591,
-        "name": "応援バルーン"
+        "name": "Thundersticks"
     },
     {
         "id": 80592,
-        "name": "プロテインドリンク"
+        "name": "Protein Drink"
     },
     {
         "id": 80593,
-        "name": "抽選券"
+        "name": "Prize Raffle Ticket"
     },
     {
         "id": 80600,
@@ -2698,6 +2738,46 @@
     {
         "id": 80654,
         "name": "プライベートビーチのパンフレット"
+    },
+    {
+        "id": 80660,
+        "name": "エリのタロットカード"
+    },
+    {
+        "id": 80661,
+        "name": "カノエのホットチョコ"
+    },
+    {
+        "id": 80662,
+        "name": "ツムギの楽譜"
+    },
+    {
+        "id": 80663,
+        "name": "レナの糸巻き"
+    },
+    {
+        "id": 80665,
+        "name": "サイコロ1確定券"
+    },
+    {
+        "id": 80666,
+        "name": "サイコロ2確定券"
+    },
+    {
+        "id": 80667,
+        "name": "サイコロ3確定券"
+    },
+    {
+        "id": 80668,
+        "name": "サイコロ4確定券"
+    },
+    {
+        "id": 80669,
+        "name": "サイコロ5確定券"
+    },
+    {
+        "id": 80670,
+        "name": "サイコロ6確定券"
     },
     {
         "id": 100000,
