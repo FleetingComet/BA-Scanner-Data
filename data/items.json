@@ -1528,6 +1528,14 @@
         "name": "Kanoe's Eleph"
     },
     {
+        "id": 10127,
+        "name": "Miyo's Eleph"
+    },
+    {
+        "id": 10128,
+        "name": "Fuyu's Eleph"
+    },
+    {
         "id": 13000,
         "name": "Akane's Eleph"
     },
@@ -2693,19 +2701,19 @@
     },
     {
         "id": 80600,
-        "name": "ハイランダー記念ステッカー"
+        "name": "Highlander Sticker"
     },
     {
         "id": 80601,
-        "name": "貨物列車の路線図"
+        "name": "Freight Train Route Guide"
     },
     {
         "id": 80602,
-        "name": "謎の積荷"
+        "name": "Mysterious Cargo"
     },
     {
         "id": 80603,
-        "name": "鉄パイプ"
+        "name": "Pipe Wrench"
     },
     {
         "id": 80630,
@@ -2782,6 +2790,22 @@
     {
         "id": 80670,
         "name": "サイコロ6確定券"
+    },
+    {
+        "id": 80680,
+        "name": "ショップカード"
+    },
+    {
+        "id": 80681,
+        "name": "絵の具"
+    },
+    {
+        "id": 80682,
+        "name": "大理石キューブ"
+    },
+    {
+        "id": 80683,
+        "name": "ブックバンド"
     },
     {
         "id": 100000,
@@ -3037,11 +3061,15 @@
     },
     {
         "id": 151020,
-        "name": "ハイランダー列車シリーズ選択ボックス"
+        "name": "Highlander Train Furniture Choice Box"
     },
     {
         "id": 151021,
         "name": "ティーパーティーシリーズ選択ボックス"
+    },
+    {
+        "id": 151022,
+        "name": "ワイルドハントキャンパスシリーズ選択ボックス"
     },
     {
         "id": 151991,
@@ -3693,11 +3721,15 @@
     },
     {
         "id": 191020,
-        "name": "ハイランダー列車シリーズ抽選ボックス"
+        "name": "Highlander Train Furniture Raffle Box"
     },
     {
         "id": 191021,
         "name": "ティーパーティーシリーズ抽選ボックス"
+    },
+    {
+        "id": 191022,
+        "name": "ワイルドハントキャンパスシリーズ抽選ボックス"
     },
     {
         "id": 191991,
@@ -3789,6 +3821,6 @@
     },
     {
         "id": 20002000,
-        "name": "手作りロールケーキ"
+        "name": "Handmade Roll Cake"
     }
 ]
