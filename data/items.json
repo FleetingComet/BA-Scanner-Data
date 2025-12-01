@@ -1544,6 +1544,10 @@
         "name": "Subaru's Eleph"
     },
     {
+        "id": 10131,
+        "name": "Takane's Eleph"
+    },
+    {
         "id": 13000,
         "name": "Akane's Eleph"
     },
@@ -1886,6 +1890,10 @@
     {
         "id": 20051,
         "name": "Reisa (Magical)'s Eleph"
+    },
+    {
+        "id": 20052,
+        "name": "Yakumo's Eleph"
     },
     {
         "id": 23000,
@@ -2737,19 +2745,19 @@
     },
     {
         "id": 80630,
-        "name": "木彫り人形（ユカリ）"
+        "name": "Wooden Yukari Doll"
     },
     {
         "id": 80631,
-        "name": "木彫り人形（ナグサ）"
+        "name": "Wooden Nagusa Doll"
     },
     {
         "id": 80632,
-        "name": "木彫り人形（キキョウ）"
+        "name": "Wooden Kikyou Doll"
     },
     {
         "id": 80633,
-        "name": "木彫り人形（レンゲ）"
+        "name": "Wooden Renge Doll"
     },
     {
         "id": 80650,
@@ -2842,6 +2850,22 @@
     {
         "id": 80703,
         "name": "ボーダーランドコイン"
+    },
+    {
+        "id": 80710,
+        "name": "イベントPt"
+    },
+    {
+        "id": 80711,
+        "name": "評論ノート"
+    },
+    {
+        "id": 80712,
+        "name": "伝票の束"
+    },
+    {
+        "id": 80713,
+        "name": "文化的書籍の見本誌"
     },
     {
         "id": 100000,
@@ -3790,6 +3814,14 @@
     {
         "id": 200001,
         "name": "Credit Card Shards"
+    },
+    {
+        "id": 200002,
+        "name": "プレナパテスの大人のカード"
+    },
+    {
+        "id": 200003,
+        "name": "粉々になった大人のカード"
     },
     {
         "id": 20000000,
