@@ -1548,6 +1548,10 @@
         "name": "Takane's Eleph"
     },
     {
+        "id": 10132,
+        "name": "Tsukuyo (Dress)'s Eleph"
+    },
+    {
         "id": 13000,
         "name": "Akane's Eleph"
     },
@@ -1894,6 +1898,10 @@
     {
         "id": 20052,
         "name": "Yakumo's Eleph"
+    },
+    {
+        "id": 20053,
+        "name": "Michiru (Dress)'s Eleph"
     },
     {
         "id": 23000,
@@ -2761,23 +2769,23 @@
     },
     {
         "id": 80650,
-        "name": "正義実現委員会の腕章"
+        "name": "Justice Task Force Armband"
     },
     {
         "id": 80651,
-        "name": "特上角砂糖"
+        "name": "Artisanal Sugar Cube"
     },
     {
         "id": 80652,
-        "name": "トリニティスペシャルケーキ"
+        "name": "Trinity Specialty Cake"
     },
     {
         "id": 80653,
-        "name": "山海経茶園の銘茶"
+        "name": "Shanhaijing Garden Specialty Tea"
     },
     {
         "id": 80654,
-        "name": "プライベートビーチのパンフレット"
+        "name": "Private Beach Guide"
     },
     {
         "id": 80660,
@@ -2866,6 +2874,22 @@
     {
         "id": 80713,
         "name": "文化的書籍の見本誌"
+    },
+    {
+        "id": 80730,
+        "name": "イベントPt"
+    },
+    {
+        "id": 80731,
+        "name": "忍者の耳飾り"
+    },
+    {
+        "id": 80732,
+        "name": "洒脱な扇子"
+    },
+    {
+        "id": 80733,
+        "name": "麺きちペイカード"
     },
     {
         "id": 100000,
@@ -3125,7 +3149,7 @@
     },
     {
         "id": 151021,
-        "name": "ティーパーティーシリーズ選択ボックス"
+        "name": "Tea Party Furniture Choice Box"
     },
     {
         "id": 151022,
@@ -3785,7 +3809,7 @@
     },
     {
         "id": 191021,
-        "name": "ティーパーティーシリーズ抽選ボックス"
+        "name": "Tea Party Set Furniture Raffle Box"
     },
     {
         "id": 191022,
