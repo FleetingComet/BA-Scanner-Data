@@ -1552,6 +1552,18 @@
         "name": "Tsukuyo (Dress)'s Eleph"
     },
     {
+        "id": 10133,
+        "name": "Rio (Armed)'s Eleph"
+    },
+    {
+        "id": 10134,
+        "name": "Aris (Armed)'s Eleph"
+    },
+    {
+        "id": 10135,
+        "name": "Kei's Eleph"
+    },
+    {
         "id": 13000,
         "name": "Akane's Eleph"
     },
@@ -1686,6 +1698,10 @@
     {
         "id": 16018,
         "name": "Rabu's Eleph"
+    },
+    {
+        "id": 16019,
+        "name": "Toki (Armed)'s Eleph"
     },
     {
         "id": 20000,
@@ -1902,6 +1918,10 @@
     {
         "id": 20053,
         "name": "Michiru (Dress)'s Eleph"
+    },
+    {
+        "id": 20054,
+        "name": "Himari (Armed)'s Eleph"
     },
     {
         "id": 23000,
@@ -2892,6 +2912,34 @@
         "name": "麺きちペイカード"
     },
     {
+        "id": 80740,
+        "name": "預言者のコア"
+    },
+    {
+        "id": 80750,
+        "name": "分析USB"
+    },
+    {
+        "id": 80754,
+        "name": "謎の物質A"
+    },
+    {
+        "id": 80755,
+        "name": "謎の物質B"
+    },
+    {
+        "id": 80756,
+        "name": "アバンギャルドコインA"
+    },
+    {
+        "id": 80757,
+        "name": "アバンギャルドコインB"
+    },
+    {
+        "id": 80758,
+        "name": "プライベートビーチのパンフレット"
+    },
+    {
         "id": 100000,
         "name": "Gift Box"
     },
@@ -3064,6 +3112,10 @@
         "name": "T9 Equipment Blueprint Choice Box"
     },
     {
+        "id": 150047,
+        "name": "WB選択ボックス"
+    },
+    {
         "id": 151000,
         "name": "Beginner Furniture Choice Box"
     },
@@ -3154,6 +3206,10 @@
     {
         "id": 151022,
         "name": "ワイルドハントキャンパスシリーズ選択ボックス"
+    },
+    {
+        "id": 151023,
+        "name": "輸送船シリーズ選択ボックス"
     },
     {
         "id": 151991,
@@ -3814,6 +3870,10 @@
     {
         "id": 191022,
         "name": "ワイルドハントキャンパスシリーズ抽選ボックス"
+    },
+    {
+        "id": 191023,
+        "name": "輸送船シリーズ抽選ボックス"
     },
     {
         "id": 191991,
