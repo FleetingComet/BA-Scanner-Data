@@ -1568,6 +1568,14 @@
         "name": "Eimi (Armed)'s Eleph"
     },
     {
+        "id": 10137,
+        "name": "Konoka's Eleph"
+    },
+    {
+        "id": 10138,
+        "name": "Rena's Eleph"
+    },
+    {
         "id": 13000,
         "name": "Akane's Eleph"
     },
@@ -2877,19 +2885,19 @@
     },
     {
         "id": 80700,
-        "name": "イベントPt"
+        "name": "Event Points"
     },
     {
         "id": 80701,
-        "name": "遊園地チケット"
+        "name": "Amusement Park Ticket"
     },
     {
         "id": 80702,
-        "name": "ポップコーンバケット"
+        "name": "Popcorn Container"
     },
     {
         "id": 80703,
-        "name": "ボーダーランドコイン"
+        "name": "Borderland Coin"
     },
     {
         "id": 80710,
@@ -2978,6 +2986,22 @@
     {
         "id": 80771,
         "name": "バレンタインデーのお誘い"
+    },
+    {
+        "id": 80780,
+        "name": "フィールドサイン"
+    },
+    {
+        "id": 80781,
+        "name": "謎の雑誌"
+    },
+    {
+        "id": 80782,
+        "name": "謎の健康グッズ"
+    },
+    {
+        "id": 80783,
+        "name": "謎のお札"
     },
     {
         "id": 100000,
