@@ -1944,6 +1944,10 @@
         "name": "Koyuki (Pajamas)'s Eleph"
     },
     {
+        "id": 20057,
+        "name": "Akane (School)'s Eleph"
+    },
+    {
         "id": 23000,
         "name": "Airi's Eleph"
     },
@@ -2901,19 +2905,19 @@
     },
     {
         "id": 80710,
-        "name": "イベントPt"
+        "name": "Event Points"
     },
     {
         "id": 80711,
-        "name": "評論ノート"
+        "name": "Critique Notebook"
     },
     {
         "id": 80712,
-        "name": "伝票の束"
+        "name": "Sales Receipt Bundle"
     },
     {
         "id": 80713,
-        "name": "文化的書籍の見本誌"
+        "name": "Cultural Book Excerpt"
     },
     {
         "id": 80730,
@@ -4029,11 +4033,11 @@
     },
     {
         "id": 200002,
-        "name": "プレナパテスの大人のカード"
+        "name": "Phrenapates' Credit Card"
     },
     {
         "id": 200003,
-        "name": "粉々になった大人のカード"
+        "name": "Credit Card Shards"
     },
     {
         "id": 20000000,
