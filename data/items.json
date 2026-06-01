@@ -1584,6 +1584,10 @@
         "name": "Kurumi's Eleph"
     },
     {
+        "id": 10141,
+        "name": "Haruka (Dress)'s Eleph"
+    },
+    {
         "id": 13000,
         "name": "Akane's Eleph"
     },
@@ -1958,6 +1962,14 @@
     {
         "id": 20057,
         "name": "Akane (School)'s Eleph"
+    },
+    {
+        "id": 20058,
+        "name": "Erika's Eleph"
+    },
+    {
+        "id": 20059,
+        "name": "Mutsuki (Dress)'s Eleph"
     },
     {
         "id": 23000,
@@ -2949,35 +2961,35 @@
     },
     {
         "id": 80740,
-        "name": "預言者のコア"
+        "name": "Prophet's Core"
     },
     {
         "id": 80750,
-        "name": "分析USB"
+        "name": "Analysis USB"
     },
     {
         "id": 80754,
-        "name": "謎の物質A"
+        "name": "Mysterious Substance A"
     },
     {
         "id": 80755,
-        "name": "謎の物質B"
+        "name": "Mysterious Substance B"
     },
     {
         "id": 80756,
-        "name": "アバンギャルドコインA"
+        "name": "Avant Guard Coin A"
     },
     {
         "id": 80757,
-        "name": "アバンギャルドコインB"
+        "name": "Avant Guard Coin B"
     },
     {
         "id": 80758,
-        "name": "プライベートビーチのパンフレット"
+        "name": "Private Beach Guide"
     },
     {
         "id": 80759,
-        "name": "謎の物質C"
+        "name": "Mysterious Substance C"
     },
     {
         "id": 80760,
@@ -3062,6 +3074,22 @@
     {
         "id": 80810,
         "name": "使用済みの乗車券"
+    },
+    {
+        "id": 80830,
+        "name": "イベントPt"
+    },
+    {
+        "id": 80831,
+        "name": "クーリングパック"
+    },
+    {
+        "id": 80832,
+        "name": "SRT小隊用レーション"
+    },
+    {
+        "id": 80833,
+        "name": "キュウリ味の歯磨き粉"
     },
     {
         "id": 100000,
@@ -3237,11 +3265,15 @@
     },
     {
         "id": 150047,
-        "name": "WB選択ボックス"
+        "name": "Workbook Choice Box"
     },
     {
         "id": 150048,
         "name": "T10装備設計図選択ボックス"
+    },
+    {
+        "id": 150049,
+        "name": "リコレクト・メモリー-ive aLIVE!交換チケット"
     },
     {
         "id": 151000,
@@ -3337,7 +3369,7 @@
     },
     {
         "id": 151023,
-        "name": "輸送船シリーズ選択ボックス"
+        "name": "Transport Ship Furniture Choice Box"
     },
     {
         "id": 151024,
@@ -3809,7 +3841,7 @@
     },
     {
         "id": 180111,
-        "name": "Operation Officer's Chocolate"
+        "name": "Operations Officer's Chocolate"
     },
     {
         "id": 180112,
@@ -3865,67 +3897,67 @@
     },
     {
         "id": 180125,
-        "name": "野球用品三種の神器チョコレート"
+        "name": "Baseball Chocolate Set"
     },
     {
         "id": 180126,
-        "name": "ちょー新作チョコレートボール！！"
+        "name": "Flaming Choco Balls!"
     },
     {
         "id": 180127,
-        "name": "疲労回復栄養ゼリー"
+        "name": "Fatigue Recovery Gummies"
     },
     {
         "id": 180128,
-        "name": "くしゃくしゃの封筒とメモ"
+        "name": "Crumpled Bag and a Note"
     },
     {
         "id": 180129,
-        "name": "白い乙女"
+        "name": "Ivory Lady Cookies"
     },
     {
         "id": 180130,
-        "name": "化粧箱入りのチョコレート"
+        "name": "Fancy Boxed Chocolates"
     },
     {
         "id": 180131,
-        "name": "魔力（?）入りチョコ"
+        "name": "Magical Chocolates"
     },
     {
         "id": 180132,
-        "name": "おばけチョコマフィン"
+        "name": "Chocolate Ghost Muffin"
     },
     {
         "id": 180133,
-        "name": "文学的ティラミス"
+        "name": "Literary Tiramisu"
     },
     {
         "id": 180134,
-        "name": "特大チョコレートゴブストッパー"
+        "name": "Supersized Chocolate Jawbreaker"
     },
     {
         "id": 180135,
-        "name": "チョコスタチュー"
+        "name": "Chocolate Statue"
     },
     {
         "id": 180136,
-        "name": "ミシン目入りチョコ"
+        "name": "Perforated Chocolate"
     },
     {
         "id": 180137,
-        "name": "チョコメレンゲクッキー"
+        "name": "Chocolate Meringue Cookies"
     },
     {
         "id": 180138,
-        "name": "カルトーシュカ"
+        "name": "Kartoshka"
     },
     {
         "id": 180139,
-        "name": "チョコレートメドヴィク"
+        "name": "Chocolate Medovik"
     },
     {
         "id": 180140,
-        "name": "市販（？）のチョコレート"
+        "name": "Store-bought(?) Chocolates"
     },
     {
         "id": 190000,
@@ -4069,7 +4101,7 @@
     },
     {
         "id": 191023,
-        "name": "輸送船シリーズ抽選ボックス"
+        "name": "Transport Ship Furniture Raffle Box"
     },
     {
         "id": 191024,
