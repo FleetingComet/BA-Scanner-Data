@@ -9,7 +9,7 @@ class Rarity(Enum):
     SSR = "SSR"
 
 
-@dataclass
+@dataclass(frozen=True)
 class Item:
     id: int
     name: str
@@ -17,14 +17,16 @@ class Item:
     icon: str
 
 
-@dataclass
+@dataclass(frozen=True)
 class Student:
     id: int
     name: str
     icon: str
+    hasBondGear: bool
+    StarGrade: int
 
 
-@dataclass
+@dataclass(frozen=True)
 class Equipment:
     id: int
     category: str
@@ -32,3 +34,11 @@ class Equipment:
     tier: int
     icon: str
     name: str
+
+
+# ? Will use it on future idk
+# @dataclass(frozen=True)
+# class ReleaseStatus:
+#     jp: bool = False
+#     en: bool = False
+#     cn: bool = False

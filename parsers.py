@@ -11,10 +11,14 @@ def parse_item(item: dict) -> Item:
 
 
 def parse_student(item: dict) -> Student:
+    gear = item.get("Gear", {})
+    
     return Student(
         id=int(item["Id"]),
         name=item["Name"],
         icon=item["Icon"],
+        hasBondGear=bool(gear),
+        StarGrade=item["StarGrade"],
     )
 
 
