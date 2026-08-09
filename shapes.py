@@ -21,7 +21,7 @@ class Item:
 class Student:
     id: int
     name: str
-    icon: str
+    # icon: str
     hasBondGear: bool
     StarGrade: int
 
