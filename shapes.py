@@ -24,6 +24,17 @@ class Student:
     # icon: str
     hasBondGear: bool
     StarGrade: int
+    DefaultOrder: int
+    # Striker ("Main") or Special ("Support")
+    SquadType: str
+    # For Dual Style Characters
+    StyleId: int | None
+    LinkedCharacterId: int | None
+    # Group them
+    BulletType: str
+    ArmorType: str
+    School: str
+    Club: str
 
 
 @dataclass(frozen=True)

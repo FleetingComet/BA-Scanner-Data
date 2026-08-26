@@ -19,6 +19,14 @@ def parse_student(item: dict) -> Student:
         # icon=f"/images/student/collection/{int(item["Id"])}.webp",
         hasBondGear=bool(gear),
         StarGrade=item["StarGrade"],
+        DefaultOrder=item["DefaultOrder"],
+        SquadType=item["SquadType"],
+        StyleId=item.get("StyleId"),
+        LinkedCharacterId=item.get("LinkedCharacterId"),
+        BulletType=item["BulletType"],  # Attack Type
+        ArmorType=item["ArmorType"],
+        School=item["School"],
+        Club=item["Club"],
     )
 
 
