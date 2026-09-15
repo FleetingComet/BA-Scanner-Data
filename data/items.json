@@ -3060,6 +3060,12 @@
         "icon": "item_icon_secretstone_ch0347"
     },
     {
+        "id": 20061,
+        "name": "Kasumi (Swimsuit)'s Eleph",
+        "rarity": "N",
+        "icon": "item_icon_secretstone_ch0328"
+    },
+    {
         "id": 23000,
         "name": "Airi's Eleph",
         "rarity": "N",

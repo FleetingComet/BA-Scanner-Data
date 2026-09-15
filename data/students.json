@@ -3834,5 +3834,19 @@
         "ArmorType": "Special",
         "School": "Odyssey",
         "Club": "DivingClub"
+    },
+    {
+        "id": 20061,
+        "name": "Kasumi (Swimsuit)",
+        "hasBondGear": false,
+        "StarGrade": 3,
+        "DefaultOrder": 274,
+        "SquadType": "SPECIAL",
+        "StyleId": null,
+        "LinkedCharacterId": null,
+        "BulletType": "Piercing",
+        "ArmorType": "Special",
+        "School": "Gehenna",
+        "Club": "Hot Springs Department"
     }
 ]
