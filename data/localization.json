@@ -1,4 +1,27 @@
 {
+    "School": {
+        "Abydos": "Abydos",
+        "Arius": "Arius",
+        "Gehenna": "Gehenna",
+        "Hyakkiyako": "Hyakkiyako",
+        "Millennium": "Millennium",
+        "RedWinter": "Red Winter",
+        "Shanhaijing": "Shanhaijing",
+        "SRT": "SRT",
+        "Trinity": "Trinity",
+        "Valkyrie": "Valkyrie",
+        "ETC": "Etc.",
+        "Tokiwadai": "Tokiwadai",
+        "Sakugawa": "Sakugawa",
+        "Other": "Other",
+        "Highlander": "Highlander",
+        "WildHunt": "Wildhunt",
+        "Odyssey": "Odyssey"
+    },
+    "SquadType": {
+        "Main": "STRIKER",
+        "Support": "SPECIAL"
+    },
     "ArmorType": {
         "LightArmor": "Light",
         "HeavyArmor": "Heavy",
@@ -8,16 +31,20 @@
         "Normal": "Normal",
         "Structure": "Structure"
     },
-    "SquadType": {
-        "Main": "STRIKER",
-        "Support": "SPECIAL"
-    },
     "TacticRole": {
         "DamageDealer": "Dealer",
         "Tanker": "Tank",
         "Healer": "Healer",
         "Supporter": "Support",
         "Vehicle": "T.S."
+    },
+    "BulletType": {
+        "Explosion": "Explosive",
+        "Pierce": "Piercing",
+        "Mystic": "Mystic",
+        "Normal": "Normal",
+        "Sonic": "Sonic",
+        "Chemical": "Corrosive"
     },
     "Club": {
         "Kohshinjo68": "Problem Solver 68",
@@ -69,32 +96,8 @@
         "FreeTradeCartel": "Free Trade Cartel (Dormitory 5, Unit 402)",
         "NicomediasTroop": "Nicomedia's Troop",
         "PublishingDepartment": "Publishing Department",
-        "FoxSquad": "FOX Squad"
-    },
-    "BulletType": {
-        "Explosion": "Explosive",
-        "Pierce": "Piercing",
-        "Mystic": "Mystic",
-        "Normal": "Normal",
-        "Sonic": "Sonic",
-        "Chemical": "Corrosive"
-    },
-    "School": {
-        "Abydos": "Abydos",
-        "Arius": "Arius",
-        "Gehenna": "Gehenna",
-        "Hyakkiyako": "Hyakkiyako",
-        "Millennium": "Millennium",
-        "RedWinter": "Red Winter",
-        "Shanhaijing": "Shanhaijing",
-        "SRT": "SRT",
-        "Trinity": "Trinity",
-        "Valkyrie": "Valkyrie",
-        "ETC": "Etc.",
-        "Tokiwadai": "Tokiwadai",
-        "Sakugawa": "Sakugawa",
-        "Other": "Other",
-        "Highlander": "Highlander",
-        "WildHunt": "Wildhunt"
+        "FoxSquad": "FOX Squad",
+        "DivingClub": "Diving Club",
+        "Class183": "Spec Ops No. 183"
     }
 }
