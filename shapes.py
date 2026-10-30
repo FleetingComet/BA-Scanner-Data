@@ -9,12 +9,31 @@ class Rarity(Enum):
     SSR = "SSR"
 
 
+class Category(Enum):
+    CHARACTER_EXP_GROWTH = "CharacterExpGrowth"  # Activity Report
+    COIN = "Coin"
+    COLLECTIBLE = "Collectible"
+    CONSUMABLE = "Consumable"
+    FAVOR = "Favor"  # Gift
+    MATERIAL = "Material"
+    SECRET_STONE = "SecretStone"  # Eleph
+
+
+class SubCategory(Enum):
+    ARTIFACT = "Artifact"
+    BOOK_ITEM = "BookItem"  # Tech Notes
+    CD_ITEM = "CDItem"  # Tactical Training Blu-ray
+
+
 @dataclass(frozen=True)
 class Item:
     id: int
-    name: str
+    category: Category
     rarity: Rarity
     icon: str
+    name: str
+    sub_category: SubCategory | None
+    tags: list[str]
 
 
 @dataclass(frozen=True)
@@ -35,6 +54,8 @@ class Student:
     ArmorType: str
     School: str
     Club: str
+    # WeaponImg: str
+    # CollectionBG: str
 
 
 @dataclass(frozen=True)
@@ -45,6 +66,15 @@ class Equipment:
     tier: int
     icon: str
     name: str
+
+
+@dataclass(frozen=True)
+class Currency:
+    id: int
+    rarity: Rarity
+    icon: str
+    name: str
+    desc: str
 
 
 # ? Will use it on future idk

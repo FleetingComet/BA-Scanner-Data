@@ -1,187 +1,75 @@
 import argparse
-import dataclasses
-import json
-import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from enum import Enum
-from pathlib import Path
 
 import requests
 
-from parsers import parse_equipment, parse_item, parse_student
-from shapes import Equipment, Item, Student
+from constant import (
+    DATA_CONFIGS,
+    DEFAULT_DATA_BASE,
+    LOCALIZATION_CONFIG,
+    STUDENT_TRANSLATION_FIELDS,
+)
+from image_download import download_images
+from localization import fetch_localization, load_localization, translate_data
+from parsers import (
+    parse_currency,
+    parse_equipment,
+    parse_item,
+    parse_student,
+    should_include_item,
+)
+from utils import write_json_if_changed
 
 PARSERS = {
     "item": parse_item,
     "student": parse_student,
     "equipment": parse_equipment,
-}
-
-DEFAULT_BASE_URL = os.getenv("SCHALEDB_BASE_URL", "https://schaledb.com/data/en")
-
-DATA_CONFIGS = {
-    "item": {
-        "filename": "items.min.json",
-        "output": "data/items.json",
-    },
-    "student": {
-        "filename": "students.min.json",
-        "output": "data/students.json",
-    },
-    "equipment": {
-        "filename": "equipment.min.json",
-        "output": "data/equipment.json",
-    },
-}
-
-LOCALIZATION_CONFIG = {
-    "filename": "localization.min.json",
-    "output": "data/localization.json",
-}
-
-STUDENT_TRANSLATION_FIELDS = {
-    "SquadType",
-    "BulletType",
-    "ArmorType",
-    "TacticRole",
-    "School",
-    "Club",
+    "currency": parse_currency,
 }
 
 
-class CustomJSONEncoder(json.JSONEncoder):
-    """Fast JSON encoder handling Enums and Dataclasses."""
+def process_json(data: dict | list, data_type: str) -> list:
+    if not isinstance(data, (dict, list)):
+        raise TypeError(f"Expected JSON object or array for {data_type}")
 
-    def default(self, obj):
-        if isinstance(obj, Enum):
-            return obj.value
-        if dataclasses.is_dataclass(obj):
-            return dataclasses.asdict(obj)
-        return super().default(obj)
-
-
-def process_json(data: dict | list, data_type: str) -> list[Item | Student | Equipment]:
-    parser_fn = PARSERS[data_type]
-    processed_list = []
-
-    # Handle both dict-based and list-based JSON payloads
     items_iterator = data.values() if isinstance(data, dict) else data
+    processed = []
 
     for item in items_iterator:
         try:
-            processed_list.append(parser_fn(item))
-        except (KeyError, ValueError) as e:
-            print(f"[{data_type}] Skipping invalid entry: {e}")
+            if not isinstance(item, dict):
+                raise TypeError("Entry must be a JSON object")
 
-    return processed_list
+            if data_type == "item" and not should_include_item(item):
+                continue
+
+            processed.append(PARSERS[data_type](item))
+        except (KeyError, ValueError, TypeError) as exc:
+            print(f"[{data_type}] Skipping entry: {exc}")
+
+    if not processed:
+        raise ValueError(f"No valid {data_type} entries; existing output preserved")
+    return processed
 
 
 def fetch_and_process(
     data_type: str, url: str, output_file: str, translations: dict | None = None
-) -> int:
+) -> bool:
     try:
-        response = requests.get(url, timeout=15)
+        response = requests.get(url, timeout=30)
         response.raise_for_status()
-        raw_data = response.json()
-    except requests.exceptions.RequestException as e:
-        print(f"[{data_type}] Error fetching data from {url}: {e}")
-        return 0
-    except json.JSONDecodeError:
-        print(f"[{data_type}] Invalid JSON received from {url}.")
-        return 0
-
-    processed_data = process_json(raw_data, data_type)
-    if translations:
-        processed_data = translate_data(processed_data, data_type, translations)
-
-    # Ensure output directory exists
-    Path(output_file).parent.mkdir(parents=True, exist_ok=True)
-
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(
-            processed_data,
-            f,
-            cls=CustomJSONEncoder,
-            indent=4,
-            ensure_ascii=False,
-        )
-
-    print(f"[{data_type}] Processed {len(processed_data)} entries -> {output_file}")
-    return len(processed_data)
-
-
-def fetch_localization(url: str, output_file: str) -> dict:
-    try:
-        response = requests.get(url, timeout=15)
-        response.raise_for_status()
-        raw_data = response.json()
-    except (requests.exceptions.RequestException, json.JSONDecodeError) as e:
-        print(f"[localization] Error fetching data: {e}")
-        return {}
-
-    filtered_data = filter_localization(raw_data)
-    if not filtered_data:
-        print("[localization] Warning: No matching fields found in localization data")
-        return {}
-
-    Path(output_file).parent.mkdir(parents=True, exist_ok=True)
-
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(
-            filtered_data,
-            f,
-            indent=4,
-            ensure_ascii=False,
-        )
-
+        processed = process_json(response.json(), data_type)
+        if translations:
+            processed = translate_data(processed, data_type, translations)
+        changed = write_json_if_changed(output_file, processed)
+    except (requests.RequestException, ValueError, OSError) as exc:
+        print(f"[{data_type}] Failed: {exc}")
+        return False
     print(
-        f"[localization] Updated -> {output_file} (filtered to {len(filtered_data)} fields)"
+        f"[{data_type}] {len(processed)} entries -> {output_file}"
+        f"{' (unchanged)' if not changed else ''}"
     )
     return True
-
-
-def load_localization() -> dict:
-    """Load localization data with caching."""
-    try:
-        with open(LOCALIZATION_CONFIG["output"], "r", encoding="utf-8") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"[localization] Warning: Could not load localization: {e}")
-        return {}
-
-
-def filter_localization(data: dict) -> dict:
-    """Keep only the fields we need for student translation."""
-    filtered = {}
-    for field in STUDENT_TRANSLATION_FIELDS:
-        if field in data:
-            filtered[field] = data[field]
-    return filtered
-
-
-def translate_student(student: Student, translations: dict) -> Student:
-    """Translate student fields using localization data."""
-    squad_type_trans = translations.get("SquadType", {})
-    bullet_type_trans = translations.get("BulletType", {})
-    armor_type_trans = translations.get("ArmorType", {})
-    school_trans = translations.get("School", {})
-    club_trans = translations.get("Club", {})
-
-    return dataclasses.replace(
-        student,
-        SquadType=squad_type_trans.get(student.SquadType, student.SquadType),
-        BulletType=bullet_type_trans.get(student.BulletType, student.BulletType),
-        ArmorType=armor_type_trans.get(student.ArmorType, student.ArmorType),
-        School=school_trans.get(student.School, student.School),
-        Club=club_trans.get(student.Club, student.Club),
-    )
-
-
-def translate_data(data: list, data_type: str, translations: dict) -> list:
-    """Translate data based on type."""
-    if data_type == "student" and translations:
-        return [translate_student(item, translations) for item in data]
-    return data
 
 
 def main():
@@ -190,7 +78,7 @@ def main():
         "-t",
         "--type",
         choices=list(DATA_CONFIGS.keys()),
-        help="Type of data to process. Leave empty to process all default types.",
+        help="Only process one dataset, Type of data to process. Leave empty to process all default types.",
     )
     parser.add_argument("-u", "--url", help="Override fetch URL.")
     parser.add_argument("-o", "--output", help="Override output JSON filepath.")
@@ -205,51 +93,62 @@ def main():
         action="store_true",
         help="Skip translation even if localization file exists.",
     )
+    parser.add_argument(
+        "--skip-images",
+        action="store_true",
+        help="Skip SchaleDB image asset downloads.",
+    )
     args = parser.parse_args()
 
     if args.update_localization:
-        url = f"{DEFAULT_BASE_URL}/{LOCALIZATION_CONFIG['filename']}"
+        url = f"{DEFAULT_DATA_BASE}/{LOCALIZATION_CONFIG['filename']}"
         translations = fetch_localization(url, LOCALIZATION_CONFIG["output"])
 
-    translations = {}
-    if not args.no_translate:
-        translations = load_localization()
-        if translations:
-            available_fields = set(translations.keys())
-            missing_fields = STUDENT_TRANSLATION_FIELDS - available_fields
-            print(f"[localization] Loaded {len(translations)} fields")
-            if missing_fields:
-                print(f"[localization] Missing fields: {', '.join(missing_fields)}")
+    translations = {} if args.no_translate else load_localization()
+
+    if translations:
+        available_fields = set(translations.keys())
+        missing_fields = STUDENT_TRANSLATION_FIELDS - available_fields
+        print(f"[localization] Loaded {len(translations)} fields")
+        if missing_fields:
+            print(f"[localization] Missing fields: {', '.join(missing_fields)}")
         else:
             print("[localization] No translations available - skipping")
 
     if args.type:
         config = DATA_CONFIGS[args.type]
-        url = args.url or f"{DEFAULT_BASE_URL}/{config['filename']}"
         output = args.output or config["output"]
-        fetch_and_process(
-            args.type, url, output, translations if not args.no_translate else None
-        )
-        return
+        url = args.url or f"{DEFAULT_DATA_BASE}/{config['filename']}"
+        if not fetch_and_process(args.type, url, output, translations):
+            return 1
+        # With a custom output path, the image downloader cannot know where to read it.
+        if not args.skip_images and not args.output and not download_images(args.type):
+            return 1
+        return 0
 
     print("Running batch update for all datasets concurrently...")
     with ThreadPoolExecutor(max_workers=len(DATA_CONFIGS)) as executor:
-        futures = []
-        for d_type, config in DATA_CONFIGS.items():
-            url = f"{DEFAULT_BASE_URL}/{config['filename']}"
-            futures.append(
-                executor.submit(
-                    fetch_and_process,
-                    d_type,
-                    url,
-                    config["output"],
-                    translations if not args.no_translate else None,
-                )
-            )
+        tasks = {
+            executor.submit(
+                fetch_and_process,
+                kind,
+                f"{DEFAULT_DATA_BASE}/{config['filename']}",
+                config["output"],
+                translations,
+            ): kind
+            for kind, config in DATA_CONFIGS.items()
+        }
 
-        for future in as_completed(futures):
-            future.result()
+        results = {tasks[future]: future.result() for future in as_completed(tasks)}
+
+    if not all(results.values()):
+        print("[main] One or more datasets failed; skipping image downloads")
+        return 1
+
+    if not args.skip_images and not download_images():
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
