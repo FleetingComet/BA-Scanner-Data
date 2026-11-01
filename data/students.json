@@ -3890,5 +3890,47 @@
         "ArmorType": "Special",
         "School": "Wildhunt",
         "Club": "Occult Society (Dormitory 4, Unit 404)"
+    },
+    {
+        "id": 10153,
+        "name": "Hifumi (Racing)",
+        "hasBondGear": false,
+        "StarGrade": 3,
+        "DefaultOrder": 278,
+        "SquadType": "STRIKER",
+        "StyleId": null,
+        "LinkedCharacterId": null,
+        "BulletType": "Explosive",
+        "ArmorType": "Special",
+        "School": "Trinity",
+        "Club": "Make-Up Work Club"
+    },
+    {
+        "id": 20063,
+        "name": "Azusa (Racing)",
+        "hasBondGear": false,
+        "StarGrade": 3,
+        "DefaultOrder": 279,
+        "SquadType": "SPECIAL",
+        "StyleId": null,
+        "LinkedCharacterId": null,
+        "BulletType": "Explosive",
+        "ArmorType": "Special",
+        "School": "Trinity",
+        "Club": "Make-Up Work Club"
+    },
+    {
+        "id": 26017,
+        "name": "Rana",
+        "hasBondGear": false,
+        "StarGrade": 1,
+        "DefaultOrder": 280,
+        "SquadType": "SPECIAL",
+        "StyleId": null,
+        "LinkedCharacterId": null,
+        "BulletType": "Explosive",
+        "ArmorType": "Special",
+        "School": "Red Winter",
+        "Club": "Spec Ops No. 183"
     }
 ]
